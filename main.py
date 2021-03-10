@@ -1,5 +1,4 @@
 from itertools import product
-from random import shuffle
 from pydub import AudioSegment
 from pydub.playback import play
 from glob import glob
@@ -10,6 +9,7 @@ from lib import *
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('-i', '--input')
 parser.add_argument('-b', '--beat_length', type=int, default=800)
+parser.add_argument('-r', '--rounds', type=int, default=100)
 
 args = parser.parse_args()
 print(args)
@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     clips = get_clips(source_filepath)
 
-    while len(clips) < 100:
+    while len(clips) < args.rounds:
         try:
             pattern = get_random_pattern()
             s = ''
