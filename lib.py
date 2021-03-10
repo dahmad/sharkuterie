@@ -1,4 +1,6 @@
 from glob import glob
+from random import randint
+
 
 def get_possible_patterns():
     return list(product('QE', repeat=4))
