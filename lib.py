@@ -1,5 +1,7 @@
 from glob import glob
 from random import randint
+from itertools import product
+from random import shuffle
 
 
 def get_possible_patterns():

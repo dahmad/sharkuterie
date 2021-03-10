@@ -1,5 +1,4 @@
 from itertools import product
-from random import shuffle
 from pydub import AudioSegment
 from pydub.playback import play
 from glob import glob
